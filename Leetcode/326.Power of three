@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isPowerOfThree(int n) {
+        // Using recursive divison
+
+        if(n==1) return true;
+        if(n<=0 || n%3 != 0) return false;
+        return isPowerOfThree(n/3);
+
+        // Multiplication loop
+        // if (n <= 0) return false;
+        // long val = 1;
+        // while (val < n) {
+        //     val *= 3;
+        // }
+        // return val == n;
+    }
+}
