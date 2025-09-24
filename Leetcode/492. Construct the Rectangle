@@ -1,0 +1,25 @@
+class Solution {
+    public int[] constructRectangle(int area) {
+        int W = (int) Math.sqrt(area);
+        while (W > 0) {
+            if (area % W == 0) {
+                int L = area / W;
+                return new int[]{L, W};
+            }
+            W--;
+        }
+        // return
+        return new int[]{area, 1};
+
+        // int L = area , W = 1;
+        // int res[] = new int[2];
+        // while(L>=W){
+        //     if(area==L*W){
+        //         res=new int[]{L,W};
+        //     }
+        //     W++;
+        //     L=area/W;
+        // }
+        // return res;
+    }
+}
