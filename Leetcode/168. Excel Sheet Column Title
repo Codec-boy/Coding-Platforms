@@ -18,3 +18,19 @@ class Solution {
         return result;
     }
 }
+
+//class Solution {
+//    public String convertToTitle(int columnNumber) {
+//     StringBuilder result = new StringBuilder();
+//
+//      while (columnNumber > 0) {
+//            columnNumber--; // Excel columns start from 1, not 0
+//            int remainder = columnNumber % 26;
+//            char letter = (char) ('A' + remainder);
+//           result.append(letter);
+//            columnNumber = columnNumber / 26;
+//        }
+//
+//        return result.reverse().toString();
+//   }
+//}
