@@ -1,0 +1,36 @@
+class Solution {
+    public boolean isTrionic(int[] nums) {
+        int n = nums.length;
+        if(n <= 2) return false;
+
+        int left = 0;
+        int right = n-1;
+ 
+        //increase
+        while(left<right){
+            if(nums[left]<nums[left+1]){
+                left++;
+            }else break;
+        }
+
+        if(left == 0) return false;
+        
+        //last increase
+        while(right>0){
+            if(nums[right] > nums[right-1]){
+                right--;
+            }else break;
+        }
+        if(right == n-1) return false;
+        //checks middle exists
+        if(left >= right) return false;
+        
+        //middle decrease
+        while(left<right){
+            if(nums[left]>nums[left+1]){
+                left++;
+            }else return false;
+        }
+        return true;
+    }
+}
