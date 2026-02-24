@@ -1,0 +1,21 @@
+class Solution {
+    public boolean checkString(String s) {
+        s = s.toLowerCase();
+
+        for(int i = 1; i<s.length(); i++){
+            if(s.charAt(i-1) == 'b' && s.charAt(i) == 'a') return false;
+        }
+        return true;
+
+
+        // for(int i = 0; i < s.length() - 1; i++){
+        //     if(s.charAt(i) > s.charAt(i+1)){
+        //         return false;
+        //     }
+        // }
+        // return true;
+
+
+        // return !s.contains("ba");
+    }
+}
