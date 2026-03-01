@@ -1,0 +1,38 @@
+class Solution {
+    public int minPartitions(String n) {
+        int ans = 0;
+        for (int i = 0; i < n.length(); ++i) {
+            ans = Math.max(ans, n.charAt(i) - '0');
+        }
+        return ans;
+
+
+        // for (char ch = '9'; ch >= '0'; ch--) {
+        //     if (n.indexOf(ch) != -1) {
+        //         return ch - '0';
+        //     }
+        // }
+
+        // return -1;
+
+
+        // if(n.indexOf('9')!=-1) return 9; 
+        // if(n.indexOf('8')!=-1) return 8;          
+        // if(n.indexOf('7')!=-1) return 7;
+        // if(n.indexOf('6')!=-1) return 6;
+        // if(n.indexOf('5')!=-1) return 5;
+        // if(n.indexOf('4')!=-1) return 4;
+        // if(n.indexOf('3')!=-1) return 3;
+        // if(n.indexOf('2')!=-1) return 2;
+        // if(n.indexOf('1')!=-1) return 1;
+        // return 0;
+
+        
+
+        // char[] digits = n.toCharArray();
+        // Arrays.sort(digits);
+        // char maxChar = digits[digits.length - 1];
+        
+        // return maxChar - '0';                             // Convert char to integer   
+    }
+}
