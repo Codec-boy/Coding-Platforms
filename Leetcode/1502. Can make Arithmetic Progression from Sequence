@@ -1,0 +1,27 @@
+class Solution {
+    public boolean canMakeArithmeticProgression(int[] arr) {
+
+        Arrays.sort(arr);
+        int n = arr.length-2;
+        int i = 0;
+
+        while (i < n) {
+            if (Math.abs(arr[i] - arr[i + 1]) != Math.abs(arr[i+1] - arr[i+2]))
+                return false;
+
+            i++;
+        }
+        return true;
+
+
+        // Arrays.sort(arr);
+        // int diff=arr[0]-arr[1];
+        // for(int i=1;i<arr.length-1;i++){
+        //     int d=arr[i]-arr[i+1];
+        //     if(diff!=d){
+        //         return false;
+        //     }
+        // }
+        // return true;
+    }
+}
